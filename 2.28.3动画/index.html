@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 200px;
+            background-color: aqua;
+            animation: myanim 3s linear 0s infinite;
+            border-radius: 100% 35px 75px;
+            margin: 0 auto;
+            box-shadow: 5px 5px 10px #2da154;
+        }
+
+        div:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes myanim {
+            0% {
+                height: 200px;
+                background-color: aqua;
+            }
+
+            25% {
+                height: 300px;
+                background-color: rgb(74, 240, 94);
+            }
+
+            50% {
+                height: 400px;
+                background-color: rgb(224, 75, 34);
+            }
+
+            75% {
+                height: 300px;
+                background-color: rgb(218, 211, 64);
+            }
+
+            100% {
+                height: 200px;
+                background-color: aqua;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div></div>
+    <p>name 动画的名称（对应 animation-name）<br>
+        duration动画的持续时间（如 2s，对应 animation-duration）<br>
+        timing-function 动画速率曲线（如 ease, linear，对应 animation-timing-function）<br>
+        delay 动画开始前的延迟时间（如 1s，对应 animation-delay）<br>
+        iteration-count 动画循环次数（infinite 表示无限循环，对应 animation-iteration-count）<br>
+        direction 动画播放方向（如 normal, reverse，对应 animation-direction）<br>
+        animation-play-state 控制动画播放状态（running 播放，paused 暂停，需单独设置）</p>
+
+
+</body>
+
+</html>
