@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+        if (num1 > num2) {
+            console.log("num1小");
+
+        } else {
+            console.log("num大");
+
+        }
+        //0~6七天
+        var day = 6;
+        if (day === 0) {
+            console.log("今天是星期一");
+        } else if (day === 1) {
+            console.log("今天是星期二");
+        } else if (day === 2) {
+            console.log("今天是星期三");
+        } else if (day === 3) {
+            console.log("今天是星期四");
+        } else if (day === 4) {
+            console.log("今天是星期五");
+        } else if (day === 5) {
+            console.log("今天是星期六");
+        } else {
+            console.log("今天是星期七");
+        }
+
+        var day = 3;
+        switch (day) {
+            case 0:
+                console.log("今天是星期一");
+                break;
+            case 1:
+                console.log("今天是星期二");
+                break;
+            case 2:
+                console.log("今天是星期三");
+                break;
+            case 3:
+                console.log("今天是星期四");
+                break;
+            case 4:
+                console.log("今天是星期五");
+                break;
+            case 5:
+                console.log("今天是星期六");
+                break;
+            default:
+                console.log("今天是星期七");
+        }
+
+        var num = 10;
+        //判断是奇数还是偶数
+        num % 2 === 0 ? console.log("偶数") : console.log("奇数");
+        //or
+        var result = num % 2 === 0 ? "偶数" : "奇数";
+        console.log(result);
+        
+
+
+    </script>
+
+
+
+</body>
+
+</html>
