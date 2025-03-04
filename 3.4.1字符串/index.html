@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var str1 = "dshudwhu'duwhwd8wd'dwdwdwdgfr";
+
+        var str2 = 'dshudwhu"duwhwd8wd"dwdwdwdgfr';
+
+        var str3 = "一定要会\"学习\"啊";
+        document.write(str3)
+        document.write("<br/>")
+
+
+        var str4 = "wdgeggregerge\
+        dwdwdwdwdwdwdw\
+        dwdwdefse";
+        document.write(str4)
+        document.write("<br/>")
+
+
+        console.log(str3.length);
+
+        //chanAt()方法，返回字符，从0开始
+        var st1 = "qwertyui";
+        document.write(st1.charAt(1))           //"w"   
+        document.write("<br/>")
+        document.write(st1.charAt(st1.length - 1))           //"i"
+        document.write("<br/>")
+        document.write(st1.charAt(-1))           //""
+        document.write(st1.charAt(8))           //""
+
+
+        //concat()方法,合成一个新的
+        var s1 = "abc";
+        var s2 = "def";
+        var s3 = "ghi";
+        var s4 = 100;
+        document.write(s1.concat(s2,s3,s4))      //or  document.write(s1 + s2 + s3 + s4)    (字符串可以用+)
+        document.write("<br/>")
+
+
+        //substring()方法，返回子字符串
+        var x = "asdfghjk";
+        document.write(x.substring(0,2))           //"as"       =document.write(x.substring(2,0)) 
+        document.write("<br/>")
+        document.write(x.substring(2))           //"dfghjk"
+        document.write("<br/>")
+        document.write(x.substring(-3))           //"asdfghjk"
+        document.write("<br/>")
+        document.write(x.substring(2,-3))           //"as"
+        document.write("<br/>")
+
+
+        //substr()方法，返回子字符串，但第二个参数是长度
+        var y = "zxcvbnm";
+        document.write(y.substr(2,4))           //"cvbn"
+        document.write("<br/>")
+        document.write(y.substr(2))           //"cvbnm"
+        document.write("<br/>")
+        document.write(y.substr(-4))           //"vbnm"
+        document.write("<br/>")
+        document.write(y.substr(4,-1))           //""
+        document.write("<br/>")
+
+
+        //indexOf()方法，一个字符串在另一个字符串中第一次出现的位置，-1不匹配
+        var z = "qwertyu";
+        document.write(z.indexOf("e"))           //"2"
+        document.write("<br/>")
+        document.write(z.indexOf("hhh"))           //"-1"
+        document.write("<br/>")
+        document.write(z.indexOf("e",4))           //"-1"(这是从第五个位置开始查找)
+        document.write("<br/>")
+
+ 
+        //trim()方法,去除字符串两边空格，制符表（\t,\v），换行符（\n）,回车符（\r）
+        var v = "    \r\dwefwsd   ";
+        document.write(v.trim())        //"dwefwsd"
+        document.write("<br/>")         //trimEnd()和trimStart()方法分别去除后面和前面的空格
+
+
+        //split()方法，分割
+        var u = "dfg|dwdw|grgr";
+        document.write(u.split("|"))           //["dfg","dwdw","grgr"] ===数组
+        document.write("<br/>")
+        document.write(u.split(""))            //["d","f","g","|","d","w","d","w","|","g","r","g","r“]
+        document.write("<br/>")
+        document.write(u.split())              //["dfg|dwdw|grgr"]
+        document.write("<br/>")
+        document.write(u.split("|",0))           //[]    (这是限制了最大的成员数)
+        document.write("<br/>")
+        document.write(u.split("|",3))           //["dfg","dwdw"，"grgr"]
+        document.write("<br/>")
+        document.write(u.split("|",4))           //["dfg","dwdw"，"grgr"]
+        document.write("<br/>")
+
+    </script>
+
+
+</body>
+
+</html>
