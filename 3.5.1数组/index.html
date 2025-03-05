@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //数组array
+        var arr = [];
+        arr[0] = "shu";
+        arr[1] = "hai";
+        arr[2] = "vyu";
+        document.write(arr)
+        document.write("<br/>")
+
+        var lofo = [100, 200, [123, "sdf"]];
+        document.write(lofo)
+        document.write("<br/>")
+        document.write(lofo[2][1])
+        document.write("<br/>")
+        document.write(lofo.length)
+        document.write("<br/>")
+        console.log(lofo[5]);           //underfined
+        document.write("<br/>")
+
+
+        //数组的遍历
+        var x = ["sdf", "qdwr", "ads", "kol"];
+        for (var i = 0; i < x.length; i++) {
+            document.write(x[i])
+            document.write("<br/>")
+        }
+
+        for (var i in x) {                //更简单一点
+            document.write(x[i])
+            document.write("<br/>")
+        }
+
+
+        // Array.isArray()方法，检测是否数组
+        var y = ["wdqwd", "dwqdqdq", "ytjhty"];
+        document.write(typeof y)                //object
+        document.write("<br/>")
+        document.write(Array.isArray(y))        //true
+        document.write("<br/>")
+
+
+        //push()方法，添加元素，返回之后的长度
+        //pop()方法，删最后一个元素，返回该元素
+        var z = [];
+        document.write(z.push("dwdwyu"))        //1
+        document.write("<br/>")
+        document.write(z.push({}, true))         //3
+        document.write("<br/>")
+
+        document.write(z.pop())         //true
+        document.write("<br/>")
+
+
+        //shift()方法，删第一个元素，返回该元素
+        //unshift()方法，添加第一个位置元素，返回之后的长度
+        var v = ["wdwd", "dwqqdq", "ytty"];
+        document.write(v.shift())         //wdwd
+        document.write("<br/>")
+        document.write(v)                 //["dwqqdq","ytty"] 
+        document.write("<br/>")
+
+        var arr1 = [100, 200, 300];
+        var u;
+        while (u = arr1.shift()) {
+            document.write(u)
+            document.write("<br/>")
+        }
+        console.log(arr1);
+        document.write("<br/>")
+
+        var arr2 = ["wdfe"];
+        document.write(arr2.unshift("jjh", true))    //3
+        document.write("<br/>")
+
+
+        //join()方法，加分隔符，将其连为一个字符串返回（默认为逗号）
+        var arr3 = [1, 2, 3, 4];
+        document.write(arr3.join("/"))    //"/1/2/3/4"
+        document.write("<br/>")
+
+        var arr4 = [undefined, null, undefined];
+        document.write(arr4.join("#"))    //" # # "
+        document.write("<br/>")
+
+
+        //concat()方法，合并一个新的
+        var arr5 = [100, "dqwf"];
+        var arr6 = ["hfei", "iiio"];
+        document.write(arr5.concat(arr6))    //[100,"dqwf","hfei","iiio"]
+        document.write("<br/>")
+        // [1,2,3].concat(4,5,6,[7,8,9])       //[1,2,3,4,5,6,7,8,9 ]
+
+
+        //reverse方法，颠倒元素
+        var arr7 = [100, 200, 300];
+        arr7.reverse();
+        document.write(arr7)    //[300,200,100]
+        document.write("<br/>")
+
+        var str = "helloworld";
+        var arr8 = str.split("");
+        arr8.reverse();
+        document.write(arr8.join(""))    //dlrowolleh
+        document.write("<br/>")
+
+
+        //indexOf()方法，一个元素在数组中第一次出现的位置，-1不匹配
+        var arr9 = [100,true,"hhh"];
+        document.write(arr9.indexOf(100))           //0
+        document.write("<br/>")
+        document.write(arr9.indexOf("100"))         //-1
+        document.write("<br/>")
+        document.write(arr9.indexOf("hhh",1))           //2(这是从第五个位置开始查找)
+        document.write("<br/>")
+
+
+
+    </script>
+
+
+</body>
+
+</html>
