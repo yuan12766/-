@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var use = {
+            name: "wdwd",
+            age: 18,
+            arr: ["dqwdq", true, 12],
+            job1: function () {
+                document.write("yyy")
+                document.write("<br/>")
+            },
+            container: {
+                frontEnd: "前端",
+                backEnd: ["qwe", "jjj"]
+            },
+        }
+
+        //对象的读取方式：对象名.属性
+        use.job1();
+        document.write(use.name)
+        document.write("<br/>")
+        document.write(use.arr)
+        document.write("<br/>")
+        for (var i = 0; i < use.arr.length; i++) {
+            document.write(use.arr[i])
+            document.write("<br/>")
+        }
+        document.write(use.container.backEnd)
+        document.write("<br/>")
+
+
+        //Math对象
+        //Math.abs()方法，返回参数的绝对值
+
+        var num = -100;
+        document.write(Math.abs(num))
+        document.write("<br/>")
+
+
+        //Main.max()方法，取最大值，如果参数为空，返回-Infinity
+        //Main.min()方法，取最小值，如果参数为空，返回Infinity
+        document.write(Math.max(2, -1, 5))
+        document.write("<br/>")
+        document.write(Math.min(2, -1, 5))
+        document.write("<br/>")
+
+
+        //Main.floor()方法，向下取整
+        //Main.ceil()方法，向上取整
+        document.write(Math.floor(3.2))
+        document.write("<br/>")
+        document.write(Math.ceil(3.2))
+        document.write("<br/>")
+
+
+        //Main.random()方法，返回0 < = ~~~ < 1的一个伪随机数
+        document.write(Math.random())
+        document.write("<br/>")
+
+        function yu(min, max) {
+            var result = Math.random() * (max - min) + min;
+            result = Math.floor(result)
+            document.write(result)
+            document.write("<br/>")
+        }
+        yu(5, 15)
+
+
+        //Date对象
+        //Date.now()方法，返回距Unix时间戳(1970年1月1日00:00 UTC)*1000得到的毫秒数(北京多8h)
+        document.write(Date.now() + "<br/>")
+        document.write(new Date(1741361611277) + "<br/>")
+        document.write(new Date() + "<br/>")
+        document.write(new Date(1741361611277).getDate() + "<br/>")       //7
+        document.write(new Date(1741361611277).getDay() + "<br/>")        //5
+        document.write(new Date(1741361611277).getFullYear() + "<br/>")   //2025
+        document.write(new Date(1741361611277).getMonth() + 1 + "<br/>")      //3 (月份从0~11)
+
+        //编写函数显示剩余天数
+        function leftdays(){
+            var today = new Date();
+            var endday = new Date(today.getFullYear(),11,31,23,59,59,999);
+            var yu1 = 24 * 60 * 60 * 1000;
+            
+        }
+
+
+
+        // getTime()：返回实例距离1970年1月1日00:00:00的毫秒数
+        // getDate()：返回实例对象对应每个月的几号(从1开始)
+        // getDay()：返回星期几，星期日为0，星期一为1，以此类推
+        // getYear()：返回距离1900的年数
+        // getFullYear()：返回四位的年份
+        // getMonth()：返回月份 (0表示1月，11表示12月)
+        // getHours()：返回小时(0-23)
+        // getMilliseconds()：返回毫秒 (0-999)
+        // getMinutes()：返回分钟(0-59)
+        // getSeconds()：返回秒(0-59)
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
