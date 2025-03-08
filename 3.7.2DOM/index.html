@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: aqua;
+        }
+
+        .xo {
+            width: 200px;
+            height: 200px;
+            border: 5px solid aqua;
+            padding: 10px;
+            margin: 20px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        .xo1 {
+            width: 100px;
+            height: 100px;
+            border: 5px solid aqua;
+            padding: 10px;
+            margin: 20px;
+            background-color: antiquewhite;
+        }
+        .ppp{
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>Hello1</div>
+    <div>Hello2</div>
+
+    <p class="yu1">yyyuu</p>
+
+    <form name="login"></form>
+
+    <div id="root">好好好</div>
+
+    <div class="nav" nav1></div>
+    <div class="nav" nav2></div>
+
+    <div id="qwe"></div>
+
+    <div class="box" id="wit">hhhhh</div>
+
+    <p>hhhh</p>
+
+    <div class="xo" id="xo"></div>
+    <div class="xo" id="xo">
+        <div class="xo1" id="xo1"></div>
+    </div>
+    
+
+    <p class="ppp">........</p>
+    <p class="ppp">........</p>
+    <p class="ppp">........</p>
+
+    <script>
+
+        if (document.nodeType === 9) {
+            document.write("顶层节点" + "<br/>")
+        }
+
+        //document对象，获取元素
+        var div2 = document.getElementsByTagName("div")[1];         //div,p
+        document.write(div2.textContent + "<br/>")
+        div2.innerHTML = "Hello World"
+
+        var yu1 = document.getElementsByClassName("yu1")[0];        //class
+        document.write(yu1.textContent + "<br/>")
+
+        var name = document.getElementsByName("login")[0];          //name(使用率低)
+        document.write(name.textContent + "<br/>")
+
+        var root = document.getElementById("root");                 //id
+        document.write(root.textContent + "<br/>")
+        root.innerHTML = "不不不"
+
+        var nav = document.querySelector(".nav");                  //id:#  class:.
+        console.log(nav);
+
+        var navs = document.querySelectorAll(".nav")[1];
+        console.log(navs);
+
+        //document对象，创建元素/creatElement,creatTextNode,creatAttribute
+        var text = document.createElement("p");
+        var content = document.createTextNode("我是文本");
+        var id = document.createAttribute("id");
+        text.appendChild(content);                                  //appendChild:将内容放入容器中
+        id.value = "root";
+        text.setAttributeNode(id);
+        console.log(text);
+        var qwe = document.getElementById("qwe");
+        qwe.appendChild(text);
+
+
+        //Element对象/id,className,classList,innerHTML,innerText
+        var wit = document.getElementById("wit");
+        console.log(wit.id);
+        wit.id = "wits"                                            //Element.id
+
+        console.log(wit.className);
+        wit.className = "box box1"                                 //Element.className
+        console.log(wit);
+
+        wit.classList.add("mybox")                                 //Element.classList.add
+        wit.classList.remove("box")                               //Element.classList.remove
+        if (wit.classList.contains("box1")) {                     //Element.classList.contains
+            console.log("有");
+        } else {
+            console.log("没有");
+
+        }
+        wit.classList.toggle("box2")                               //Element.classList.toggle(有则去除，无则添加)
+        console.log(wit);
+
+        console.log(wit.innerHTML);                //读取
+        wit.innerHTML = "hhhhhO(∩_∩)O哈哈~"
+        //innerHTML和innerText的区别
+        //innerHTML可以识别标签
+        //innerText会把标签识别成一个字符串
+        var str = "<a href ='https://www.qidian.com/'>起点<a/>"
+        wit.innerHTML = str
+        wit.innerText = str
+
+
+        //Element获取元素位置
+        var xo = document.getElementById("xo");
+        console.log(xo.clientWidth);                //包含padding,不包含border,margin
+        console.log(xo.clientHeight);
+        //获取视口高度（屏幕高度）
+        console.log(document.documentElement.clientHeight);
+        //获取页面高度
+        console.log(document.body.clientHeight);
+        
+        var xo = document.getElementById("xo");
+        console.log(xo.scrollWidth);                //包含padding,不包含border,margin(包括溢出的不可见内容)
+        console.log(xo.scrollHeight);
+        //获取视口高度（屏幕高度）
+        console.log(document.documentElement.scrollWidth);
+        //获取页面高度
+        console.log(document.body.scrollHeight);
+        
+        //获取滚动高度
+        console.log(document.documentElement.scrollTop);
+        //获取向right滚动了多少
+        console.log(document.documentElement.scrollLeft);
+        
+        console.log(xo.offsetWidth);                //包含border,padding
+        console.log(xo.offsetHeight);
+
+        var xo1 = document.getElementById("xo1");
+        //到父级左边的距离(要父级定位)
+        console.log(xo1.offsetLeft);      
+        //到父级上边的距离
+        console.log(xo1.offsetTop);
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
