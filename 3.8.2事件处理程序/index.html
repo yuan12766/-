@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="clickhandle()">按钮1</button>
+    <br>
+    <button id="btn">按钮2</button>
+    <br>
+    <button id="btn1">按钮3</button>
+
+
+
+
+    <script>
+
+        //HTML事件(HTML和JS没有分开)
+        function clickhandle() {
+            console.log("点击了按钮");
+
+        }
+
+
+        //DOM0事件(无法同时添加多个事件)
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            console.log("点击啦");
+        }
+
+
+        //DOM2事件
+        var btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", function () {
+            console.log("点击点击1");
+        })
+        btn1.addEventListener("click", function () {
+            console.log("点击点击2");
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

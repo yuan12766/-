@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(41, 161, 161);
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(6, 40, 40);
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(23, 33, 123);
+        }
+        .box5{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(19, 28, 70);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 
+    click：按下鼠标时触发
+    dblclick：在同一个元素上双击鼠标时触发
+    mousedown：按下鼠标键时触发
+    mouseup：释放按下的鼠标键时触发
+    mousemove：当鼠标在节点内部移动时触发。当鼠标持续移动时，该事件会连触发。
+    mouseenter：鼠标进入一个节点时触发，进入子节点不会触发这个事件
+    mouseleave：鼠标离开一个节点时触发，离开父节点不会触发这个事件
+    mouseover：鼠标进入一个节点时触发，进入子节点会再一次触发这个事件
+    mouseout：鼠标离开一个节点时触发，子节点会再一次触发这个事件
+    wheel：滚动鼠标的滚轮时触发
+    -->
+
+    <button id="btn1">单击</button>
+    <button id="btn2">双击</button>
+    <button id="btn3">鼠标按下</button>
+    <button id="btn4">鼠标抬起</button>
+    <div id="btn5" class="box1"></div>
+    <div id="btn6" class="box2"></div>
+    <div id="btn7" class="box3"></div>
+    <div id="btn8" class="box4"></div>
+    <div id="btn9" class="box5"></div>
+
+    <script>
+
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        var btn4 = document.getElementById("btn4");
+        var btn5 = document.getElementById("btn5");
+        var btn6 = document.getElementById("btn6");
+        var btn7 = document.getElementById("btn7");
+        var btn8 = document.getElementById("btn8");
+        var btn9 = document.getElementById("btn9");
+
+        btn1.onclick = function(){
+            console.log("单击事件");
+        }
+
+        btn2.ondblclick = function(){
+            console.log("双击事件");
+        }
+
+        btn3.onmousedown = function(){
+            console.log("鼠标按下");
+        }
+
+        btn4.onmouseup = function(){
+            console.log("鼠标抬起");
+        }
+
+        btn5.onmousemove = function(){
+            console.log("鼠标移动中");
+        }
+
+        btn6.onmouseenter = function(){             //进入子节点不会触发这个事件
+            console.log("鼠标移动入");
+        }
+
+        btn7.onmouseleave = function(){             //离开父节点不会触发这个事件
+            console.log("鼠标移动出");
+        }
+
+        btn8.onmouseover = function(){              //进入字子节点会再一次触发这个事件
+            console.log("鼠标移动入");
+        }
+
+        btn9.onmouseout = function(){               //子节点会再一次触发这个事件
+            console.log("鼠标移动出");
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
