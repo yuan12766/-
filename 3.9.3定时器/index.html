@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="box"></div>
+
+    <script>
+
+        // setTimeout()方法
+        var timer = setTimeout(function () {
+            console.log("大家好，三秒之后执行");
+        }, 3000)
+
+        //取消定时器
+        clearTimeout(timer);
+
+        var name = "哈哈哈"
+        var user = {
+            name: "hhh",
+            getname: function () {
+                // this永远指向当前调用者
+                var that = this
+                setTimeout(function () {
+                    console.log(that.name);         // 有定时器的this会指向全局环境
+                }, 1000)
+            }
+
+        }
+
+        user.getname();                            // 哈哈哈
+
+
+        //setinterval()方法
+        var i = 0;
+        var timi = setInterval(function () {
+            i++;
+            console.log(i);
+        }, 1000)
+
+        clearTimeout(timi);
+
+        //动画
+        var div = document.getElementById("box");
+        //透明度：opacity:0~1
+        var opacity = 1;
+        var fader = setInterval(function () {
+            opacity -= 0.05;
+            div.style.opacity = opacity
+            if (opacity <= 0) {
+                clearInterval(fader)
+            }
+        }, 60)
+
+
+    </script>
+
+
+
+</body>
+
+</html>
