@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const {log} = console ;
+
+        //includes():是否找到
+        //startsWith():是否在头部
+        //endsWith():是否在尾部
+        var str = "asdfgh";
+        var x = "as";
+        log(str.includes(x));        //true
+        log(str.startsWith(x));      //true
+        log(str.startsWith(x,3));    //false
+        log(str.endsWith(x));        //false
+
+
+        //repeat()方法:重复
+        log("ab".repeat(3));        //ababab
+
+
+        //padStart()方法：补全长度，多余补到头
+        //padEnd()方法：补全长度，多余补到尾
+        log("x".padStart(5,"ab"));      //ababx
+        log("x".padEnd(5,"ab"));      //xabab
+
+
+        //at()方法:返回位置字符(超出范围返回underfined)
+        var y = "hello";
+        log(y.at(1));             //e
+        log(y.at(-1));            //o
+        log(y.at(10));            //超出范围返回underfined
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

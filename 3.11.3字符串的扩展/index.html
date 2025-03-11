@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //Unicode
+        console.log("\u0061");           //"a"
+
+
+        //字符串遍历器接口
+        var str = "dasufkp"
+        for( let i of str ){
+            console.log(i);
+            
+        }
+
+
+        //模板字符串
+        var href = "https://www.qidian.com/";
+        var text = "起点";
+
+        var qidian = "<a href='"+ href +"'>"+ text +"</a>";
+        console.log(qidian);
+        //模板之后
+        var qidian1 = `<a href="${href}">${text}</a>`
+        console.log(qidian1);
+        
+    </script>
+
+
+
+</body>
+</html>
