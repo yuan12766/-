@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>标题1</h3>
+    <h3>标题2</h3>
+    <h3>标题3</h3>
+
+    <script>
+
+        const { log } = console;
+        const { max } = Math;
+        const { from,of } = Array;
+
+        //扩展运算符...
+        log(...[1, 2, 3]);
+        log(1, ...[2, 3, 4], 5);
+
+        var arr = [10, 20, 30, 40];        //求数组的最大值
+        log(max.apply(null, arr));
+        log(max(...arr));
+
+        var arr1 = [50, 60];             //合并数组     
+        log([...arr, ...arr1]);
+
+
+        //A  rray.from()方法，将类数组(arguments,元素集合，类似数组的对象)转换成数组
+        //arguments
+        function add() {
+            log(arguments);          //可以读到10,20,30
+            log(arguments[2]);
+            var result = from(arguments);
+            result.push(40)
+            log(result);
+        }
+        add(10, 20, 30)
+
+        //元素集合
+        var titles = document.querySelectorAll("h3");
+        log(titles);
+        log(titles[1]);             //标题2
+        log(from(titles));
+
+        //类似数组的对象
+        var user = {
+            "0":"hhh",
+            "1":18,
+            "2":"男",
+            length:3
+        }
+        log(user["1"]);          //18
+        log(user.length);        //3
+        log(from(user));
+
+
+        //Array.of()方法：将一组值转换为数组
+        log(of(12,34,56));       //[12,34,56]
+
+
+        //Array()方法
+        log(Array(3));          //开辟了三个空间[,,,]
+
+    </script>
+
+</body>
+
+</html>

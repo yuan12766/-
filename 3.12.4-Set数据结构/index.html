@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const { log } = console;
+
+        //Set()不重复
+        var s = new Set();
+        var arr =[10,20,30,40,50,50];
+        arr.forEach(x => s.add(x))
+        log(s);
+        log(s.add([1,2,3]));
+
+        var arr1 = [10,20,30,10,10,20];           //去重
+        // var x = new Set(arr1);
+        // arr1 = [...x]
+        // log(arr1);
+        log([...new Set(arr1)]);
+        log([...new Set("ababca")].join(","))    //a,b,c
+
+        var x = new Set();                      //不转换形式
+        x.add(5);
+        x.add("5");
+        log(x);         //[5,"5"]
+
+        //有size属性
+        log(x.size)     //2
+
+
+        //add()方法,delete()方法，加减
+        var myset = new Set();
+        myset.add(1);
+        myset.add(2);
+        myset.add(3);
+        myset.delete(3);
+        log(myset);
+
+
+        //has()方法，返回布尔值
+        var flag =myset.has(3);
+        log(flag);
+
+
+        //clear()方法，清空
+        myset.clear();
+        log(myset);
+
+
+    </script>
+
+
+
+</body>
+</html>

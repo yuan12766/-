@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const { log } = console;
+
+        //简化
+        var name = "qwe";
+        var user = {
+            name,       //属性名和属性值相同可省略
+            age: 18,
+            // getName: function () {
+            //     log(this.name);
+            // }
+            getName(){
+                log(this.name);
+            }
+        }
+        user.getName();
+        function getPoint(){
+            var x = 23.56;
+            var y = 12.67;
+            // return{
+            //     x:x,
+            //     y:y
+            // }
+            return{ x, y }
+        }
+        log(getPoint().x,getPoint().y)
+
+
+        //属性名表达式
+        var yu = "yuan";
+        var user ={
+            [yu]:"hhh,sdf,kjji",
+            age:18
+        }
+        log(user)       //{"yuan": "hhh,sdf,kjji" , "age": 18}
+        log(user.yu)    //underfined
+
+
+        //扩展运算符...
+        var z = {a:10,b:20};
+        var n = {...z};
+        log({n});
+        log(n);
+
+
+
+    </script>
+
+
+</body>
+
+</html>
