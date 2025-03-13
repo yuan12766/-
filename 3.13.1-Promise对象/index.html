@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box">等待加载</div>
+
+    <script>
+
+        const { log } = console;
+
+        var box = document.getElementById("box");
+
+        function loadIamage(url) {
+            const promise = new Promise(function(resolve,reject){
+                //异步处理
+                const image = new Image();
+                image.src = url
+                image.onload = function(){
+                    resolve(image);
+                };
+                image.onerror = function(){
+                    reject(new Error("Conld not load image at " + url));
+                };
+            })
+            return promise;
+        }
+
+        const promise = loadIamage("https://bkimg.cdn.bcebos.com/pic/e7cd7b899e510fb30f2492ac2462df95d143ad4ba6f4");
+        promise.then(function(date){
+            //成功
+            box.appendChild(date)
+        },function(error){
+            //失败
+            box.innerHTML = "图片加载失败";
+            log(error);
+        })
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

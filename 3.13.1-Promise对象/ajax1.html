@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        const { log } = console;
+
+        const getJSON = function (url) {
+            const promise = new Promise(function (resolve, reject) {
+                const client = new XMLHttpRequest();
+
+                // 修正点：使用箭头函数保留上下文，并修正属性名
+                client.onreadystatechange = () => {
+                    if (client.readyState !== 4) return;
+
+                    // 修正点：client.status 非 client.state
+                    if (client.status >= 200 && client.status < 300) {
+                        // 修正点：responseType 设为 "json" 时直接使用 client.response
+                        resolve(client.response);
+                    } else {
+                        // 修正点：使用 client.statusText 替代 this.statusText
+                        reject(new Error(`请求失败: ${client.status} ${client.statusText}`));
+                    }
+                };
+
+                // 新增：网络错误处理
+                client.onerror = () => {
+                    reject(new Error("网络连接失败"));
+                };
+
+                client.open("GET", url);
+                client.responseType = "json"; // 自动解析 JSON
+                client.setRequestHeader("Accept", "application/json");
+                client.send();
+            });
+            return promise;
+        };
+
+        // 测试调用
+        getJSON("https://jsonplaceholder.typicode.com/todos/1")
+            .then(data => log("成功:", data))
+            .catch(error => log("失败:", error));
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
