@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-1.js"></script>
+</head>
+
+<body>
+
+    <script>
+
+        const { log } = console;
+
+        function ajax(url) {
+            return new Promise((request, reject) => {
+                $.getJSON(url, (result) => {
+                    resolve(result)
+                }, (error) => {
+                    reject(error)
+                })
+            })
+        }
+
+        async function getInfo() {
+            var id = await ajax("http://第一个接口地址");
+            var info = await ajax("http://第二个接口地址" + id[0]);
+            var result = await ajax("http://第二个接口地址" + info.name);
+            log(result);        //async可以直接读取promise的结果，不用then了
+            // result.then(date => {
+            //     log(date);
+            // }, error => {
+            //     log(error);
+            // })
+        }
+
+        getInfo();
+
+    </script>
+
+</body>
+
+</html>

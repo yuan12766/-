@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const { log } = console;
+
+        //ES5类的表现形态
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        Person.prototype.getName = function () {
+            log(this.name);
+        }
+        Person.prototype.getAge = function () {
+            log(this.age);
+        }
+
+        var p = new Person("qde", 18)
+        p.getName();
+        p.getAge();
+
+
+
+    </script>
+
+</body>
+
+</html>

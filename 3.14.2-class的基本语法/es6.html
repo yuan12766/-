@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const { log } = console;
+
+        //ES6的表现形式
+        class Person {                      //不存在提升
+            constructor(name, age) {        //constructor必须有
+                this.name = name;
+                this.age = age;
+            }
+            getName(){
+                log(this.name);
+            }
+            getAge(){
+                log(this.age);
+            }
+        }
+
+        var p = new Person("qde", 18)
+        p.getName();
+        p.getAge();
+
+
+
+    </script>
+
+</body>
+
+</html>
