@@ -262,7 +262,7 @@
 
 .nav-bar-list li {
     line-height: normal;
-    border-right:1px solid #eee ;
+    border-right: 1px solid #eee;
 }
 
 .nav-bar-list .name {
@@ -276,3 +276,182 @@
 }
 
 /* 白色导航 end */
+
+/* Banner start */
+.banner {
+    width: 100%;
+    height: 460px;
+    background-color: #fff;
+}
+
+.banner-img {
+    width: 100%;
+}
+
+.banner>.wrap {
+    position: relative;
+}
+
+.slide {
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+    background-color: rgba(105, 101, 101, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide>ul>li {
+    height: 42px;
+    line-height: 42px;
+    text-align: left;
+    padding-left: 35px;
+    font-size: 14px;
+}
+
+.slide>ul>li>a {
+    color: #fff;
+}
+
+.slide i {
+    float: right;
+    padding-right: 25px;
+}
+
+.slide>ul>li:hover {
+    background-color: #ff6700;
+}
+
+.slide-list {
+    width: 992px;
+    height: 460px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    box-sizing: border-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+    position: absolute;
+    top: 0;
+    left: 234px;
+    display: none;
+}
+
+.slide>ul>li:hover>.slide-list {
+    display: block;
+}
+
+.slide-list ul {
+    width: 100%;
+}
+
+.slide-list ul li {
+    width: 247px;
+    height: 76px;
+    float: left;
+    padding: 18px 0 18px 20px;
+    box-sizing: border-box;
+    line-height: 76px;
+}
+
+.slide-list img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.slide-list span {
+    color: #333;
+    font-size: 14px;
+    position: relative;
+    top: -8px;
+}
+
+.slide-list li:hover span {
+    color: #ff6700;
+}
+
+/* Banner end */
+
+/* 广告模块 start */
+.ad {
+    width: 100%;
+    height: 170px;
+    padding: 14px 0;
+    background-color: #fff;
+}
+
+.ad-aside {
+    width: 234px;
+    height: 170px;
+    background-color: #5f5750;
+    padding: 3px;
+    box-sizing: border-box;
+    font-size: 12px;
+    float: left;
+}
+
+.ad-aside li {
+    width: 76px;
+    height: 82px;
+    float: left;
+    padding-top: 18px;
+    box-sizing: border-box;
+    opacity: 0.7;
+}
+
+.ad-aside li:hover {
+    opacity: 1;
+}
+
+.ad-aside i {
+    font-size: 24px;
+    margin-bottom: 4px;
+    display: block;
+    color: #fff;
+}
+
+.ad-aside p {
+    color: #fff;
+}
+
+.ad-img {
+    width: 316px;
+    height: 170px;
+    margin-left: 14.6px;
+    float: right;
+}
+
+.ad-img img {
+    width: 100%;
+}
+
+/* 广告模块 end */
+
+/* 内容模块 start */
+.content {
+    width: 100%;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    padding: 4px 0 12px;
+}
+
+/* 内容模块 end */
+
+/* 手机模块 start */
+.title{
+    text-align: left;
+    font-size: 22px;
+    color: #333;
+    font-weight: 200;
+    line-height: 58px;
+}
+.phone-box{
+    width: 100%;
+    height: 614px;
+}
+.phone-box-left{
+    width: 234px;
+    height: 614px;
+    float: left;
+}
+/* 手机模块 end */
