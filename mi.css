@@ -67,6 +67,7 @@
     top: 40px;
     left: 50%;
     margin-left: -62px;
+    z-index: 10;
     overflow: hidden;
 }
 
@@ -133,6 +134,7 @@
     color: #424242;
     overflow: hidden;
     line-height: 100px;
+    z-index: 10;
 }
 
 .cart:hover>.cart-list {
@@ -254,6 +256,7 @@
     left: 0;
     top: 100px;
     display: none;
+    z-index: 10;
 }
 
 .nav-bar li:hover>.nav-bar-list {
@@ -556,11 +559,12 @@
 /* 家电模块 end */
 
 /* 视频模块 start */
-.video-box{
+.video-box {
     width: 100%;
     height: 299px;
 }
-.video-box>div{
+
+.video-box>div {
     width: 296px;
     height: 285px;
     background-color: #fff;
@@ -568,20 +572,24 @@
     margin: 0 14px 14px 0;
     transition: all 0.2s linear;
 }
-.video-box>div:last-child{
+
+.video-box>div:last-child {
     margin-right: 0;
 }
-.video-box>div:hover{
+
+.video-box>div:hover {
     transform: translateY(-2px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
-.video-img{
+
+.video-img {
     width: 100%;
     height: 180px;
     margin-bottom: 28px;
     position: relative;
 }
-.btn{
+
+.btn {
     width: 32px;
     height: 20px;
     border-radius: 12px;
@@ -590,7 +598,8 @@
     left: 20px;
     bottom: 10px;
 }
-.sanjiao{
+
+.sanjiao {
     width: 0;
     height: 0;
     border-left: 8px solid #fff;
@@ -598,22 +607,148 @@
     border-bottom: 6px solid transparent;
     margin: 4px auto;
 }
-.video-name{
+
+.video-name {
     width: 285px;
     height: 21px;
     font-size: 14px;
     color: #333;
     margin: 0 auto 6px;
 }
-.video-desc{
+
+.video-desc {
     width: 285px;
     height: 18px;
     font-size: 12px;
     color: #b0b0b0;
     margin: 0 auto;
 }
-.video-img:hover .btn{
+
+.video-img:hover .btn {
     background-color: #ff6700;
     border-color: #ff6700;
 }
+
 /* 视频模块 end */
+
+/* 页脚模块 start */
+.footer {
+    background-color: #fff;
+}
+
+.footer-service {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-service li {
+    float: left;
+    width: 20%;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+.footer-service li:last-child {
+    border-right: none;
+}
+
+.footer-service li i {
+    font-size: 24px;
+    margin-right: 6px;
+}
+
+.footer-service a {
+    color: #616161;
+}
+
+.footer-service a:hover {
+    color: #ff6700;
+}
+
+.footer-link {
+    width: 100%;
+    height: 172px;
+    padding: 40px 0;
+}
+
+.footer-link ul {
+    float: left;
+    width: 160px;
+    text-align: left;
+    color: #424242;
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.footer-link ul a {
+    color: #757575;
+    font-size: 12px;
+}
+
+.footer-link ul a:hover {
+    color: #ff6700;
+}
+
+.footer-link ul li {
+    margin-top: 10px;
+}
+
+.footer-link ul li:nth-child(2) {
+    margin-top: 25px;
+}
+
+.footer-aside {
+    width: 250px;
+    height: 110px;
+    border-left: 1px solid #e0e0e0;
+    float: right;
+    color: #616161;
+}
+
+.footer-aside .tel {
+    font-size: 22px;
+    line-height: 22px;
+    color: #ff6700;
+    margin-bottom: 5px;
+}
+
+.footer-aside .time {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.kefu {
+    display: block;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ff6700;
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #ff6700;
+    transition: all 0.4s;
+}
+
+.kefu:hover {
+    background-color: #f25807;
+    border-color: #f25807;
+    color: #fff;
+}
+
+.follow {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.follow img {
+    width: 24px;
+    margin-left: 6px;
+    position: relative;
+    top: 7px;
+}
+
+/* 页脚模块 end */
